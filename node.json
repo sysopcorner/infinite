@@ -1,0 +1,13 @@
+{
+  "java": {
+    "install_flavor": "openjdk",
+    "jdk_version": "6"
+  },
+  "tomcat": {
+    "java_options": "${JAVA_OPTS} -Xmx256M -Djava.awt.headless=true"
+  },
+  "run_list": [
+    "recipe[tomcat]",
+    "recipe[tomcat::users]"
+  ]
+}
